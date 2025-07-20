@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+ <hibernate-mapping>
+       <class name="orr.jsp.hib_proj.Employee" table="Employee">
+           <id name="id" column="id"><generator class="identity"></generator></id>
+           <property name="name" column="name" not-null="true"></property>
+           <property name="phone" column="phone" not-null="true" unique="true"></property>
+           <property name="desg" column="desg" not-null="true"></property>
+           <property name="salary" column="salary" not-null="true"></property>
+           <property name="email" column="email" not-null="true" unique="true"></property>
+           <property name="password" column="password" not-null="true"></property>
+       </class>
+ </hibernate-mapping>
